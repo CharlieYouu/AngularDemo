@@ -1,3 +1,4 @@
+import { BaseService } from "./../../../service/base.service";
 import { Component, OnInit } from "@angular/core";
 
 @Component({
@@ -13,7 +14,12 @@ export class DirectPageComponent implements OnInit {
   public data = ["list1", "list2", "list3"];
   public switch = "2";
 
-  constructor() {}
+  constructor(private baseService: BaseService) {}
 
   ngOnInit() {}
+
+  onClick() {
+    const data = this.baseService.getData();
+    alert("baseService   " + data);
+  }
 }

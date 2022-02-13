@@ -17,6 +17,7 @@ export class AppComponent {
     "third-page",
     "moban-page",
     "direct-page",
+    "service-page",
   ];
 
   constructor(private loggerService: LoggerService, private router: Router) {}
