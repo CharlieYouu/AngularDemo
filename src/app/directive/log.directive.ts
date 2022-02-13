@@ -5,13 +5,18 @@ import { LoggerService } from "@service/logger.service";
   selector: "[log]",
 })
 export class LogDirective {
-  constructor(private loggerService: LoggerService, elementRef: ElementRef) {}
+  constructor(
+    private loggerService: LoggerService,
+    private elementRef: ElementRef
+  ) {}
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    this.loggerService.log("log1");
-    this.loggerService.warn("log2");
-    this.loggerService.info("log3");
+    this.loggerService.log("direct log1");
+
+    (
+      this.elementRef.nativeElement.firstChild as HTMLElement
+    ).style.backgroundColor = "skyblue";
   }
 }
