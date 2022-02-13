@@ -1,0 +1,33 @@
+<p>
+  {{currentCustomer + ' ' + getText()}}
+</p>
+
+id
+<input type="text" (change)="inputChange($event)" [(ngModel)]="peopleInfo.username">
+<br/>
+pwd
+<input type="text" (change)="inputChange($event)" [(ngModel)]="peopleInfo.userpwd">
+<br/>
+<button (click)="doLogin()">
+  login
+</button>
+<button (click)="doClear()">
+  clear
+</button>
+<div>
+  <button (click)="doClick($event)">
+    弹出窗口
+  </button>
+
+  <button (click)="doAsync()">
+    同步执行
+  </button>
+
+  <button (click)="doUnAsync1()">
+    异步执行1
+  </button>
+
+  <button (click)="doUnAsync2()">
+    异步执行2
+  </button>
+</div>
