@@ -1,0 +1,42 @@
+<!-- toggle the "special" class on/off with a property -->
+<div [ngClass]="isSpecial ? 'special1' : 'special2'" [ngStyle]="{'color': color}"> This div is special</div>
+
+<div>
+  This div is special
+</div>
+
+
+<div *ngIf="isDom">显示dom</div>
+
+<ng-container *ngIf="isDom; else elseTemplate">
+  <div>
+    显示dom ng-if-else
+  </div>
+</ng-container>
+<ng-template #elseTemplate>
+  elseTemplate
+</ng-template>
+
+
+
+
+
+<div style="display: flex;list-style: none;;">
+  <li *ngFor="let item of data; let i=index" style="margin-left: 10px;">
+    <span>{{item}}</span>
+    &nbsp;&nbsp;
+    <span>{{i}}</span>
+  </li>
+</div>
+
+<div [ngSwitch]="switch">
+  <p *ngSwitchCase="'1'">
+    case1
+  </p>
+  <p *ngSwitchCase="'2'">
+    cse2
+  </p>
+  <p *ngSwitchDefault>
+    default
+  </p>
+</div>
