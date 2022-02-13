@@ -1,3 +1,4 @@
+import { DirectComponent } from './admin/component/direct/direct.component';
 import { DirectPageComponent } from "@admin/page/direct-page/direct-page.component";
 import { FirstPageComponent } from "@admin/page/first-page/first-page.component";
 import { MobanComponent } from "@admin/page/moban/moban.component";
@@ -14,6 +15,7 @@ import { AppComponent } from "./app.component";
     FirstPageComponent,
     MobanComponent,
     DirectPageComponent,
+    DirectComponent
   ],
   imports: [BrowserModule, AppRoutingModule, DirectiveModule, FormsModule],
   providers: [],
